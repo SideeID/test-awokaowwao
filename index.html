@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <title>HEHE</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://cdn.rawgit.com/bungfrangki/efeksalju/2a7805c7/efek-salju.js"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body>
+    <div id="loading">
+      <img
+        id="loading-image"
+        src="https://media.tenor.com/8KWBGNcD-zAAAAAC/loader.gif"
+        alt="Loading..."
+      />
+    </div>
+
+    <div style="background: white">
+      <iframe
+        src="https://freesecure.timeanddate.com/clock/i7h99ycq/n108/fn7/fs17/tct/pct/ftb/tt0/th1/ta1"
+        frameborder="0"
+        width="100%"
+        height="30"
+        allowtransparency="true"
+        title="Jam"
+      ></iframe>
+    </div>
+
+    <marquee
+      behavior="scroll"
+      direction="left"
+      scrollamount="10"
+      onmouseover="this.stop();"
+      onmouseout="this.start();"
+    >
+      <font color="red" size="5">Selamat Datang Di Website Saya</font>
+    </marquee>
+
+    <div class="container">
+      <div class="content">
+        <h3>Hi, I'm SideID</h3>
+        <p>Website ini dibuat untuk test saja</p>
+        <img
+          src="415018887_122112696830156396_8406485462067350836_n.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="untuk-p">
+      <p>Ip Mu adalah = <span id="ip"></span></p>
+      <p>ISP Mu adalah = <span id="isp"></span></p>
+      <p>Organisasimu adalah = <span id="org"></span></p>
+      <p>Hostname mu adalah = <span id="host"></span></p>
+      <p>Latitude mu adalah = <span id="lat"></span></p>
+      <p>Longitude mu adalah = <span id="long"></span></p>
+      <p>Postal Code mu adalah = <span id="code"></span></p>
+      <p>Kotamu adalah = <span id="city"></span></p>
+      <p>kode = <span id="code"></span></p>
+      <p>Negaramu adalah = <span id="codename"></span></p>
+      <p>kontinen kodemu adalah = <span id="contcode"></span></p>
+      <p>nama kontinenmu adalah = <span id="contname"></span></p>
+      <p>regionmu adalah = <span id="reg"></span></p>
+      <p>Distrikmu adalah = <span id="district"></span></p>
+      <p>Timezone mu adalah = <span id="time"></span></p>
+      <p>tipe koneksimu adalah = <span id="conn"></span></p>
+      <p>nomor ASN Negara mu adalah = <span id="asnn"></span></p>
+      <p>Nomor ASN Organisasimu adalah = <span id="asno"></span></p>
+      <p>Nama ASN Mu adalah = <span id="asn"></span></p>
+      <p>Currency code mu adalah = <span id="curcod"></span></p>
+      <p>Currency name mu adalah = <span id="curname"></span></p>
+      <p>Keberhasilan Track ? = <span id="succ"></span></p>
+    </div>
+    <audio id="myAudio" style="display: none">
+      <source src="laylay.mp3" type="audio/mpeg" />
+    </audio>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      $.getJSON('https://json.geoiplookup.io/?callback=?', function (data) {
+        $('#ip').html(data.ip);
+        $('#isp').html(data.isp);
+        $('#org').html(data.org);
+        $('#host').html(data.hostname);
+        $('#lat').html(data.latitude);
+        $('#long').html(data.longitude);
+        $('#post').html(data.postal_code);
+        $('#city').html(data.city);
+        $('#code').html(data.country_code);
+        $('#codename').html(data.country_name);
+        $('#contcode').html(data.continent_code);
+        $('#contname').html(data.continent_name);
+        $('#reg').html(data.region);
+        $('#district').html(data.district);
+        $('#time').html(data.timezone_name);
+        $('#conn').html(data.connection_type);
+        $('#asnn').html(data.asn_number);
+        $('#asno').html(data.asn_org);
+        $('#asn').html(data.asn);
+        $('#curcod').html(data.currency_code);
+        $('#curname').html(data.currency_name);
+        $('#succ').html(data.success);
+        $('#prem').html(data.premium);
+      });
+    </script>
+    <script type="application/javascript">
+      function hapusCookie() {
+        document.cookie.split(';').forEach(function (c) {
+          document.cookie = c
+            .replace(/^ +/, '')
+            .replace(
+              /=.*/,
+              '=;expires=' + new Date().toUTCString() + ';path=/'
+            );
+        });
+        document.cookie =
+          '_ga=; path=/; domain=' +
+          domainValue +
+          '; expires=' +
+          new Date(0).toUTCString();
+        document.cookie =
+          '_gid=; path=/; domain=' +
+          domainValue +
+          '; expires=' +
+          new Date(0).toUTCString();
+        document.cookie =
+          '_gat=; path=/; domain=' +
+          domainValue +
+          '; expires=' +
+          new Date(0).toUTCString();
+        document.cookie =
+          '_gat_gtag_UA_182568_1=; path=/; domain=' +
+          domainValue +
+          '; expires=' +
+          new Date(0).toUTCString();
+        document.cookie =
+          'cookieconsent_status=; path=/; domain=' +
+          domainValue +
+          '; expires=' +
+          new Date(0).toUTCString();
+        document.cookie =
+          'cookieconsent_dismissed=yes; path=/; domain=' +
+          domainValue +
+          '; expires=' +
+          new Date(0).toUTCString();
+        document.cookie =
+          'cookieconsent_status=dismiss; path=/; domain=' +
+          domainValue +
+          '; expires=' +
+          new Date(0).toUTCString();
+
+        alert('Cookie Anda Telah Dihapus');
+      }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var audio = document.getElementById('myAudio');
+        audio.play();
+      });
+    </script>
+    <script type="application/javascript">
+      $(window).on('load', function () {
+        $('#loading').hide();
+      });
+    </script>
+  </body>
+</html>
